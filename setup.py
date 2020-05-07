@@ -53,10 +53,10 @@ class My_install(install):
 
     def run(self):
         try:    
-            subprocess.call(['make config'], cwd = path.join(here, 'src', 
+            subprocess.call(['make config'], cwd = path.join(here, 
                             'Cluster_Ensembles', 'Hypergraph_Partitioning', 'metis-5.1.0'),
                             shell = True)
-            subprocess.call(['make'], cwd = path.join(here, 'src',
+            subprocess.call(['make'], cwd = path.join(here, 
                             'Cluster_Ensembles', 'Hypergraph_Partitioning', 'metis-5.1.0'),
                             shell = True)
         except Exception as e:
@@ -110,7 +110,7 @@ setup(name = 'Cluster_Ensembles',
                    'Topic :: Scientific/Engineering :: Mathematics', ],
                    
       packages = ['Cluster_Ensembles'],
-      package_dir = {'Cluster_Ensembles': 'src/Cluster_Ensembles'},
+      package_dir = {'Cluster_Ensembles': 'Cluster_Ensembles'},
       
       include_package_data = True,
       package_data = {
